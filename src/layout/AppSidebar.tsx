@@ -28,23 +28,23 @@ type NavItem = {
 const navItems: NavItem[] = [
   {
     icon: <GridIcon />,
-    name: "Панель",
+    name: "Dashboard",
     path: "/",
   },
   {
     icon: <CalenderIcon />,
-    name: "Календарь",
+    name: "Calendar",
     path: "/calendar",
   },
   {
   icon: <ListIcon />,
-  name: "Правила",
+  name: "Rules",
   path: "/rules",
 },
 
   {
     icon: <UserCircleIcon />,
-    name: "Профиль пользователя",
+    name: "Profile",
     path: "/profile",
   },
 // {
@@ -56,7 +56,7 @@ const navItems: NavItem[] = [
 //   ],
 // },
   {
-    name: "Страница ошибки",
+    name: "Error Page",
     icon: <PageIcon />,
     path: "/error-404",
   },
@@ -65,10 +65,10 @@ const navItems: NavItem[] = [
 const othersItems: NavItem[] = [
   {
     icon: <PlugInIcon />,
-    name: "Аутентификация",
+    name: "Authentication",
     subItems: [
-      { name: "Вход", path: "/signin", pro: false },
-      { name: "Регистрация", path: "/signup", pro: false },
+      { name: "Sign in", path: "/signin", pro: false },
+      { name: "Sign up", path: "/signup", pro: false },
     ],
   },
 ];
@@ -322,7 +322,7 @@ const AppSidebar: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Меню"
+                  "Menu"
                 ) : (
                   <HorizontaLDots className="size-6" />
                 )}
@@ -338,7 +338,7 @@ const AppSidebar: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Дополнительно"
+                  "Additional"
                 ) : (
                   <HorizontaLDots />
                 )}

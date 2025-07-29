@@ -2,7 +2,7 @@ import { useState } from "react";
 
 type TimeRange = "day" | "week" | "month" | "year";
 
-export const DateFilter = ({ storeCount = 285 }) => {
+export const DateFilter = () => {
   const [selectedRange, setSelectedRange] = useState<TimeRange>("day");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -28,18 +28,6 @@ export const DateFilter = ({ storeCount = 285 }) => {
 
   return (
     <div className="flex flex-col lg:flex-row gap-4 w-full">
-      {/* Store Count - Desktop & Mobile */}
-      <div className="flex items-center h-11 px-3 rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800 shadow-theme-xs min-w-[140px] max-w-[160px]">
-        <div className="flex items-center gap-2 w-full">
-          <svg className="w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-          </svg>
-          <span className="text-sm font-medium text-gray-800 dark:text-white/90 whitespace-nowrap truncate">
-            {storeCount} {storeCount === 1 ? "магазин" : storeCount < 5 ? "магазина" : "магазинов"}
-          </span>
-        </div>
-      </div>
-
       {/* Date Filter */}
       <div className="relative flex-1 min-w-0">
         {/* Desktop Version */}
@@ -61,10 +49,10 @@ export const DateFilter = ({ storeCount = 285 }) => {
                     : "text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
                 }`}
               >
-                {range === "day" && "День"}
-                {range === "week" && "Неделя"}
-                {range === "month" && "Месяц"}
-                {range === "year" && "Год"}
+                {range === "day" && "Day"}
+                {range === "week" && "Week"}
+                {range === "month" && "Month"}
+                {range === "year" && "Year"}
               </button>
             ))}
           </div>
@@ -103,10 +91,10 @@ export const DateFilter = ({ storeCount = 285 }) => {
                   }`}
                 >
                   <span>
-                    {range === "day" && "День"}
-                    {range === "week" && "Неделя"} 
-                    {range === "month" && "Месяц"}
-                    {range === "year" && "Год"}
+                    {range === "day" && "Day"}
+                    {range === "week" && "Week"} 
+                    {range === "month" && "Month"}
+                    {range === "year" && "Year"}
                   </span>
                   {selectedRange === range && (
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

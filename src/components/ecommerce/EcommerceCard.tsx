@@ -41,9 +41,9 @@ export default function ModelManagementCard() {
 
   // Mock data
   const [datasets, setDatasets] = useState([
-    { version: 'v1.2', rows: 12543, features: 28, uploaded: '2023-05-15', size: '45.2 MB' },
-    { version: 'v1.1', rows: 11200, features: 28, uploaded: '2023-04-10', size: '40.1 MB' },
-    { version: 'v1.0', rows: 9800, features: 25, uploaded: '2023-03-01', size: '35.7 MB' }
+    { version: 'v1.2', rows: 12543, features: 28, uploaded: '2025-07-17', size: '45.2 MB' },
+    { version: 'v1.1', rows: 11200, features: 28, uploaded: '2025-07-10', size: '40.1 MB' },
+    { version: 'v1.0', rows: 9800, features: 25, uploaded: '2025-06-11', size: '35.7 MB' }
   ]);
 
   const [models, setModels] = useState<ModelVersion[]>([
@@ -54,7 +54,7 @@ export default function ModelManagementCard() {
       datasetVersion: 'v1.2',
       metrics: { auc: 0.92, accuracy: 0.88, f1: 0.89, precision: 0.87, recall: 0.91 },
       status: 'success',
-      timestamp: '2023-05-16 14:30',
+      timestamp: '2025-07-17 14:30',
       isProduction: true
     },
     {
@@ -64,7 +64,7 @@ export default function ModelManagementCard() {
       datasetVersion: 'v1.2',
       metrics: { auc: 0.91, accuracy: 0.87, f1: 0.88, precision: 0.86, recall: 0.90 },
       status: 'success',
-      timestamp: '2023-05-16 12:15',
+      timestamp: '2025-07-16 12:15',
       isProduction: false
     },
     {
@@ -74,7 +74,7 @@ export default function ModelManagementCard() {
       datasetVersion: 'v1.1',
       metrics: { auc: 0.89, accuracy: 0.85, f1: 0.86, precision: 0.84, recall: 0.88 },
       status: 'success',
-      timestamp: '2023-04-11 09:45',
+      timestamp: '2025-07-12 09:45',
       isProduction: false
     },
     {
@@ -84,7 +84,7 @@ export default function ModelManagementCard() {
       datasetVersion: 'v1.2',
       metrics: { auc: 0.90, accuracy: 0.86, f1: 0.87, precision: 0.85, recall: 0.89 },
       status: 'training',
-      timestamp: '2023-05-17 10:20',
+      timestamp: '2025-07-10 10:20',
       isProduction: false,
       trainingProgress: 45
     }
